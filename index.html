@@ -4,21 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diseñadora Freelancer</title>
+    <link rel="preload" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <!--Hoja de estilos dentro del documento
+    <style>
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+      }
+    </style>
+    -->
   </head>
-  <body>
+  <div>
     <header>
-      <h1>Alexandra Maria López</h1>
+      <h1 class="titulo">Alexandra Maria López <span>Freelancer</span></h1>
     </header>
 
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Sobre mi</a>
-      <a href="#">Contacto</a>
+    <div class="nav-bg">
+      <nav class="navegacion-principal contenedor">
+        <a href="#">Inicio</a>
+        <a href="#">Sobre mí</a>
+        <a href="#">Contacto</a>
       <!--<a href="nosotros.html">Sobre mi</a>-->
-    </nav>
+      </nav>
+   </div>
 
     <section>
-      <h2>Diseño y desarrollo web freelancer</h2>
+      <h2 class="titulo">Diseño y desarrollo web </h2>
       <p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
