@@ -1,55 +1,113 @@
 :root{
     --gris:#F0F1F2; 
+    --grisclaro:#dfe9f3; 
     --verde1:#01261C;
     --verde2:#025949;
     --verde3:#038C73; 
     --verde4:#2CC186;
+    --blanco:#ffffff; 
     
     /*--fuenteprincipal: 3.8rem*/
 }
 html{
     font-size: 62.5%;
+    box-sizing: border-box;/*Hack para box model*/
+}
+/* * selecciona todos los elementos del html
+Para solucionar que se sume el padding*/
+*, *:before, *:after{
+    box-sizing: inherit;
 }
 
+/*Globales*/
 body{
     font-size: 16px;/*1 rem=10px*/
     font-family: "Montserrat", sans-serif;
+    /*Para el degradado de fondo*/
+    background-image: linear-gradient(to top,var(--grisclaro) 0%, var(--blanco) 100%);
 }
 
-.titulo {
+.contenedor{
+    max-width: 120rem;/*1200px*/
+    margin: 0 auto;
+}
+
+.boton{
+    background-color: var(--gris);
+    color: var(--verde2);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
     text-align: center;
+}
+/*Reiniciar el tamaño del botón*/
+@media (min-width: 480px) {
+    .boton{
+        width: auto;
+    }
+}
+
+/*https://cssmatic.com/box-shadow*/
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color:var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;/*Esquinas redondas del fondo*/
+}
+
+/*Tipografía*/
+h1{
     font-size: 3.8rem;
     /*font-size: var(--fuenteprincipal);*/
     /*color: var(--verde1);*/
-    
-  }
+}
 
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+/*Títulos*/
 .titulo span{
     font-size: 2rem;
 }
 
-.contenedor{
-    width: 120rem;/*1200px*/
-    /*margin-top: 0;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto;Es lo mismo de la linea de abajo*/
-    /*margin: 0 auto 0 auto; se puede dejar como esta abajo*/
-    margin: 0 auto
-}
-
+/*Navegación principal*/
 .nav-bg
 {
     background-color: var(--verde1);
 }
 
 .navegacion-principal{
-    
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
+/*Responsive web design*/
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+    }
+}
+
 .navegacion-principal a{
+    display: block;
+    text-align: center;
     color:var(--gris);
     text-decoration: none;   
     font-size: 2rem;
@@ -61,3 +119,91 @@ body{
     background-color: var(--gris);
     color: var(--verde1);
 }
+
+/*Hero*/
+.hero{
+    background-image: url(../img/hero.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0,0,0,.7);/*Sintaxis Anterior*/
+    background-color: rgb(0 0 0 / 80%);/*Sintaxis Actual*/
+    width: 100%;
+    height: 100%;
+
+    /*Alinear vertical y horizontalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--gris);
+}
+
+.contenido-hero .ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
+/*Servicios*/
+@media (min-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;/*Una fraccion o 33.3% o repeat(3,1fr)*/
+        column-gap: 1rem;/*Separacion entre columnas*/
+    }    
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3{
+    color: var(--verde2);
+    font-weight: 700;
+}
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--verde1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Contacto*/
+.formulario{
+    background-color: var(--grisclaro);
+    width: min(60rem, 100%);/*Utiliza el valor mas pequeño*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.formulario fieldset{
+    border: none;
+}
+.formulario legend
+{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--verde1);
+}
+
+

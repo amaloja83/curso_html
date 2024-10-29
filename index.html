@@ -28,6 +28,7 @@
       <h1 class="titulo">Alexandra Maria López <span>Freelancer</span></h1>
     </header>
 
+    <!--Menu de navegación-->
     <div class="nav-bg">
       <nav class="navegacion-principal contenedor">
         <a href="#">Inicio</a>
@@ -37,94 +38,110 @@
       </nav>
    </div>
 
-    <section>
-      <h2 class="titulo">Diseño y desarrollo web </h2>
-      <p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-map-pin-check"
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-          <path
-            d="M11.87 21.48a1.992 1.992 0 0 1 -1.283 -.58l-4.244 -4.243a8 8 0 1 1 13.355 -3.474"
-          />
-          <path d="M15 19l2 2l4 -4" />
-        </svg>
-      </p>
-      <p>A Coruña, España</p>
-      <a href="">Contactar</a>
+    <section class="hero">
+      <div class="contenido-hero">
+        <h2>Diseño y desarrollo web </h2>
+      
+        <div class="ubicacion">
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-map-pin-check"
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+              <path
+                d="M11.87 21.48a1.992 1.992 0 0 1 -1.283 -.58l-4.244 -4.243a8 8 0 1 1 13.355 -3.474"
+              />
+              <path d="M15 19l2 2l4 -4" />
+            </svg>
+          A Coruña, España</p>
+        </div>
+        
+      <a class="boton" href="#">Contactar</a>
+      </div><!--.contenido-hero-->
     </section>
 
-    <main>
+    <main class="contenedor sombra">
       <h2>Mis servicios</h2>
 
-      <section>
+      <div class="servicios">
+      <section class="servicio">
         <h3>Diseño web</h3>
+        <div class="iconos">
         <img src="img/web.png" alt="diseño web" width="64" height="64" />
+        </div>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
       </section>
 
-      <section>
+      <section class="servicio">
         <h3>Mantenimiento de ordenadores</h3>
-        <img
+        <div class="iconos">
+          <img
           src="img/ordenador.png"
           alt="mantenimiento"
           width="64"
           height="64"
-        />
+          />
+        </div>
+       
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
       </section>
 
-      <section>
-        <h3>Auditoria sistemas operativos</h3>
-        <img src="img/auditor.png" alt="auditoria" width="64" height="64" />
+      <section class="servicio">
+        <h3>Auditoría de sitios web</h3>
+        <div class="iconos">
+          <img src="img/auditor.png" alt="auditoria" width="64" height="64" />
+        </div>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
       </section>
-    </main>
+    </div><!--.servicios-->
+    
 
     <section>
       <h2>Contacto</h2>
-      <form action="">
+      <form class="formulario">
         <fieldset>
           <legend>Contáctanos Aquí</legend>
 
-          <div>
+          <div class="contenedor-campos">  
+          <div class="campo">
             <label>Nombre</label>
             <input type="text" placeholder="Nombre completo" />
           </div>
 
-          <div>
+          <div class="campo">
             <label>Móvil</label>
             <input type="tel" placeholder="Móvil" />
           </div>
 
-          <div>
+          <div class="campo">
             <label>Email</label>
             <input type="email" placeholder="tu email" />
           </div>
 
-          <div>
+          <div class="campo">
             <label>Mensaje</label>
             <textarea></textarea>
           </div>
-
+        </div><!--.contenedor-campos-->
           <div>
             <input type="submit" value="enviar" />
             <!--Otra opcion seria-> <button type="sumbit" value="Enviar">Enviar</button>-->
           </div>
+          
         </fieldset>
       </form>
     </section>
-
+  </main>
     <footer>
       <p>Todos los derechos reservados. Alexandra María López</p>
     </footer>
